@@ -13,16 +13,16 @@ const [extended , setExtended] = React.useState(true)
         <img className="menu" onClick={()=>setExtended(prev=>!prev)} src={assets.menu_icon} alt="" />
         <div className="new-chat">
           <img src={assets.plus_icon} alt="" />
-         <p>New chat</p>
+         {extended?<p>New chat</p>:null}
         </div>
-       
+       {extended?
         <div className="recent">
           <p className="recent-title">Recent</p>
           <div className="recent-entry">
             <img src={assets.message_icon} alt="" />
             <p>What is Reactjs ?.....</p>
           </div>
-        </div>
+        </div>:null}
 
       </div>
 
