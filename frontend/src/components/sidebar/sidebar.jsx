@@ -15,7 +15,11 @@ const Sidebar = () => {
           alt=""
         />
         <div className="new-chat">
-          <img src={assets.plus_icon} alt="" />
+          <img
+            onClick={() => setExtended((prev) => !prev)}
+            src={assets.plus_icon}
+            alt=""
+          />
           {extended ? <p>New chat</p> : null}
         </div>
         {extended ? (
